@@ -68,7 +68,7 @@ app.get('/shoes', (req, res) => {
     if (filteredContent.length > 0) {
         res.send(filteredContent);
     } else {
-        res.send(shoes);
+        res.send("no shoes for you");
     }
 });
 
