@@ -65,7 +65,11 @@ app.get('/shoes', (req, res) => {
         }
     }
 
-    res.send(filteredContent.length ? filteredContent : shoes);
+    if (filteredContent.length > 0) {
+        res.send(filteredContent);
+    } else {
+        res.send(shoes);
+    }
 });
 
 app.listen(3000, () => {
